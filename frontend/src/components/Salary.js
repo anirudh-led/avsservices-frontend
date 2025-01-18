@@ -34,7 +34,7 @@ const PaymentForm = () => {
     };
 
     // Send payment data to the backend
-    fetch('http://localhost:4000/pay', {
+    fetch('https://avs-services-backend.onrender.com/pay', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
