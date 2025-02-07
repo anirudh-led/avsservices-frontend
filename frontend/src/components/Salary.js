@@ -3,12 +3,11 @@ import React, { useState, useEffect } from 'react';
 const PaymentForm = () => {
   const [users, setUsers] = useState([]); // State to hold the users data
   const [selectedUser, setSelectedUser] = useState('');
-  const [paymentMethod, setPaymentMethod] = useState('bank_transfer');
   const [amount, setAmount] = useState('');
   const [notes, setNotes] = useState('');
 
   useEffect(() => {
-    fetch('https://avs-services-backend.onrender.com/workers', {
+    fetch('http://localhost:4000/workers', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json'
@@ -34,7 +33,7 @@ const PaymentForm = () => {
     };
 
     // Send payment data to the backend
-    fetch('https://avs-services-backend.onrender.com/pay', {
+    fetch('http://localhost:4000/pay', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -44,7 +43,8 @@ const PaymentForm = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          alert('Payment Successful!');
+          alert('Payment Successful!')
+          window.location.href = '/'
         } else {
           alert('Payment failed: ' + data.error);
         }

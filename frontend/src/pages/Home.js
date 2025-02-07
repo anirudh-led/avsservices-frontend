@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import { useNavigate } from 'react-router-dom';
 import Salary from '../components/Salary';
+import Balance from '../components/Balance';
 
 const Home = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -36,7 +37,10 @@ const Home = () => {
             </p>
           </div>
         ) : (
+          <>
           <Salary />
+          <Balance />
+          </>
         ) }
         
     </div>

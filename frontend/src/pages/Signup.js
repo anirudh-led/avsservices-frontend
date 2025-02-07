@@ -16,7 +16,7 @@ const Signup = () => {
             salary: salary,
         };
 
-        fetch("https://avs-services-backend.onrender.com/signup", {
+        fetch("http://localhost:4000/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

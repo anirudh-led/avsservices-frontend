@@ -6,6 +6,10 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 
+const isAuthenticated = () => {
+  return document.cookie.includes('connect.sid'); // Checks session cookie
+};
+
 function App() {
   return (
     <>

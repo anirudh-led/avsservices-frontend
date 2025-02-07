@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="py-4 flex w-full items-center justify-between">
+      <nav className="py-4 flex w-full items-center justify-between bg-green-50">
         <h1 className="text-3xl mx-2 font-bold bg-gradient-to-r from-teal-400 via bg-cyan-400 to-blue-400 text-transparent bg-clip-text font-sans flex items-center">
           <a href="/">Avs</a>
         </h1>
@@ -67,6 +67,9 @@ const Navbar = () => {
                     >
                       Log out
                     </button>
+                    <a href={"/profile/"} className='px-4 py-2 text-left mb-2 text-slate-800 rounded-lg hover:text-slate-950 w-full'>
+                      Profile
+                    </a>
                   </div>
                 )}
               </div>
