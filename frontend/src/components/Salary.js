@@ -86,7 +86,7 @@ const PaymentForm = () => {
             name="amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            className="w-full border-2 border-gray-300 rounded-md p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border-3 border-gray-300 rounded-md p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter amount to pay"
             required
           />

@@ -37,7 +37,7 @@ const Balance = () => {
       <ul className="mt-4">
         {workers.map((worker) => (
           <li key={worker.id} className="border-b py-2">
-            <p><strong>{worker.username}:</strong> ${worker.balance}</p>
+            <p><center><strong>{worker.username}:</strong> ${worker.balance}</center></p>
           </li>
         ))}
       </ul>
