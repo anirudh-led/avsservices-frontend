@@ -8,7 +8,7 @@ const Balance = () => {
   useEffect(() => {
     const fetchWorkers = async () => {
       try {
-        const response = await fetch('http://localhost:4000/workers', {
+        const response = await fetch('https://avs-services-backend.onrender.com/workers', {
           credentials: 'include',
         });
 

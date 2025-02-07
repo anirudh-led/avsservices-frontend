@@ -14,7 +14,7 @@ const Login = () => {
             password: password,
         };
 
-        fetch("http://localhost:4000/login", {
+        fetch("https://avs-services-backend.onrender.com/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
